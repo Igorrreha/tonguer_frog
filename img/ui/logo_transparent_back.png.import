@@ -1,0 +1,13 @@
+[remap]
+
+importer="image"
+type="Image"
+path="res://.import/logo_transparent_back.png-023dd7e585d17608acfaa47f9daa1913.image"
+
+[deps]
+
+source_file="res://img/ui/logo_transparent_back.png"
+dest_files=[ "res://.import/logo_transparent_back.png-023dd7e585d17608acfaa47f9daa1913.image" ]
+
+[params]
+

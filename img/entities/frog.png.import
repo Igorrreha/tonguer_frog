@@ -1,0 +1,13 @@
+[remap]
+
+importer="image"
+type="Image"
+path="res://.import/frog.png-d34ae596ccf73a9af0f1314f95ff6037.image"
+
+[deps]
+
+source_file="res://img/entities/frog.png"
+dest_files=[ "res://.import/frog.png-d34ae596ccf73a9af0f1314f95ff6037.image" ]
+
+[params]
+

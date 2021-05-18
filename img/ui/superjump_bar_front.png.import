@@ -1,0 +1,13 @@
+[remap]
+
+importer="image"
+type="Image"
+path="res://.import/superjump_bar_front.png-3dbf53752ee5831211bf9299ffc1e55e.image"
+
+[deps]
+
+source_file="res://img/ui/superjump_bar_front.png"
+dest_files=[ "res://.import/superjump_bar_front.png-3dbf53752ee5831211bf9299ffc1e55e.image" ]
+
+[params]
+

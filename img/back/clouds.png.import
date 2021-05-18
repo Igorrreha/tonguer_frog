@@ -1,0 +1,13 @@
+[remap]
+
+importer="image"
+type="Image"
+path="res://.import/clouds.png-1dbc634112619af633254dafe9cc1bd7.image"
+
+[deps]
+
+source_file="res://img/back/clouds.png"
+dest_files=[ "res://.import/clouds.png-1dbc634112619af633254dafe9cc1bd7.image" ]
+
+[params]
+

@@ -1,0 +1,9 @@
+[gd_scene format=2]
+
+[node name="TongueLine" type="Line2D"]
+points = PoolVector2Array( 0, 0, 180, 0 )
+width = 6.0
+default_color = Color( 0.941176, 0.160784, 0.141176, 1 )
+joint_mode = 1
+begin_cap_mode = 2
+end_cap_mode = 2

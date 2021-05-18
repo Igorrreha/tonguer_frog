@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://obj/tongue.gd" type="Script" id=1]
+
+[node name="Tongue" type="Node2D" groups=[
+"Persist",
+]]
+script = ExtResource( 1 )

@@ -1,0 +1,80 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://entities/fly.gd" type="Script" id=1]
+[ext_resource path="res://obj/collectable.tscn" type="PackedScene" id=2]
+
+[sub_resource type="Image" id=1]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 113, 65, 59, 255, 113, 65, 59, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 113, 65, 59, 255, 113, 65, 59, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 255, 255, 255, 255, 113, 65, 59, 255, 113, 65, 59, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 113, 65, 59, 255, 113, 65, 59, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 214, 199, 255, 32, 214, 199, 255, 219, 164, 99, 255, 219, 164, 99, 255, 32, 214, 199, 255, 32, 214, 199, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 219, 164, 99, 255, 219, 164, 99, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 214, 199, 255, 32, 214, 199, 255, 219, 164, 99, 255, 219, 164, 99, 255, 32, 214, 199, 255, 32, 214, 199, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 32, 214, 199, 255, 219, 164, 99, 255, 219, 164, 99, 255, 32, 214, 199, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 214, 199, 255, 219, 164, 99, 255, 219, 164, 99, 255, 32, 214, 199, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 32, 214, 199, 255, 219, 164, 99, 255, 219, 164, 99, 255, 32, 214, 199, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 219, 164, 99, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 219, 164, 99, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ),
+"format": "RGBA8",
+"height": 8,
+"mipmaps": false,
+"width": 16
+}
+
+[sub_resource type="ImageTexture" id=2]
+flags = 3
+flags = 3
+image = SubResource( 1 )
+size = Vector2( 32, 16 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "Idle"
+length = 0.15
+loop = true
+step = 0.075
+tracks/0/type = "value"
+tracks/0/path = NodePath("Collectable/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.075 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Collectable/Sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.0089041, 0.075 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 2,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -1 ) ]
+}
+
+[node name="Fly" type="Node2D" groups=[
+"Persist",
+]]
+script = ExtResource( 1 )
+
+[node name="Collectable" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0, 0 )
+
+[node name="Sprite" type="Sprite" parent="Collectable"]
+position = Vector2( 0, -1 )
+texture = SubResource( 2 )
+hframes = 2
+frame = 1
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+visible = false
+color = Color( 1, 1, 1, 0.196078 )
+polygon = PoolVector2Array( -24, -40, 24, -40, 48, 0, 24, 40, -24, 40, -48, 0 )
+
+[node name="TimerWait" type="Timer" parent="."]
+one_shot = true
+
+[node name="TweenMove" type="Tween" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Idle"
+anims/Idle = SubResource( 3 )
+
+[connection signal="timeout" from="TimerWait" to="." method="_on_TimerWait_timeout"]
+[connection signal="tween_all_completed" from="TweenMove" to="." method="_on_TweenMove_tween_all_completed"]

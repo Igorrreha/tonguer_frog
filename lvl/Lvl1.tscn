@@ -1,0 +1,241 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://obj/superjump_zone.tscn" type="PackedScene" id=1]
+[ext_resource path="res://entities/fly.tscn" type="PackedScene" id=2]
+[ext_resource path="res://entities/bird.tscn" type="PackedScene" id=3]
+[ext_resource path="res://obj/checkpoint.tscn" type="PackedScene" id=4]
+[ext_resource path="res://obj/grab_point.tscn" type="PackedScene" id=7]
+
+[node name="Lvl" type="Node2D"]
+
+[node name="PlayerStartPos" type="Position2D" parent="."]
+position = Vector2( 78.4, 567 )
+
+[node name="StaticBodies" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 0
+
+[node name="Floor" type="CollisionPolygon2D" parent="StaticBodies"]
+polygon = PoolVector2Array( -344, 576, -288, 1160, 1368, 1032, 1488, 576 )
+
+[node name="Floor2" type="CollisionPolygon2D" parent="StaticBodies"]
+polygon = PoolVector2Array( 1576, 576, 1624, 1024, 2224, 1024, 2296, 576 )
+
+[node name="Floor3" type="CollisionPolygon2D" parent="StaticBodies"]
+polygon = PoolVector2Array( 2368, 576, 2440, 1016, 2464, 576 )
+
+[node name="Floor4" type="CollisionPolygon2D" parent="StaticBodies"]
+polygon = PoolVector2Array( 2520, 520, 2592, 520, 2584, 976 )
+
+[node name="Floor5" type="CollisionPolygon2D" parent="StaticBodies"]
+polygon = PoolVector2Array( 2664, 640, 2704, 1184, 3376, 1216, 3416, 640 )
+
+[node name="Floor6" type="CollisionPolygon2D" parent="StaticBodies"]
+polygon = PoolVector2Array( 3568, 744, 3712, 744, 3704, 1132, 3592, 1088 )
+
+[node name="Floor7" type="CollisionPolygon2D" parent="StaticBodies"]
+polygon = PoolVector2Array( 3800, 776, 3808, 800, 3936, 800, 3944, 776 )
+
+[node name="Floor8" type="CollisionPolygon2D" parent="StaticBodies"]
+polygon = PoolVector2Array( 4264, 776, 4272, 792, 4400, 792, 4408, 776 )
+
+[node name="Floor9" type="CollisionPolygon2D" parent="StaticBodies"]
+polygon = PoolVector2Array( 4544, 984, 5160, 1008, 5144, 720, 4480, 720 )
+
+[node name="Floor10" type="CollisionPolygon2D" parent="StaticBodies"]
+polygon = PoolVector2Array( 5552, 480, 5560, 1208, 5968, 1216, 6008, 480 )
+
+[node name="Floor11" type="CollisionPolygon2D" parent="StaticBodies"]
+polygon = PoolVector2Array( 6104, 408, 6152, 1048, 6608, 1032, 6576, 408 )
+
+[node name="Floor12" type="CollisionPolygon2D" parent="StaticBodies"]
+polygon = PoolVector2Array( 6656, 360, 6672, 1024, 6768, 1024, 6760, 360 )
+
+[node name="Floor13" type="CollisionPolygon2D" parent="StaticBodies"]
+polygon = PoolVector2Array( 7104, 368, 7296, 1024, 7392, 1024, 7400, 368 )
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBodies"]
+color = Color( 0.054902, 0.0823529, 0.0666667, 1 )
+polygon = PoolVector2Array( -344, 576, -288, 1160, 1368, 1032, 1488, 576 )
+
+[node name="Polygon2D2" type="Polygon2D" parent="StaticBodies"]
+color = Color( 0.054902, 0.0823529, 0.0666667, 1 )
+polygon = PoolVector2Array( 1576, 576, 1624, 1024, 2224, 1024, 2296, 576 )
+
+[node name="Polygon2D3" type="Polygon2D" parent="StaticBodies"]
+color = Color( 0.054902, 0.0823529, 0.0666667, 1 )
+polygon = PoolVector2Array( 2368, 576, 2440, 1016, 2464, 576 )
+
+[node name="Polygon2D4" type="Polygon2D" parent="StaticBodies"]
+color = Color( 0.054902, 0.0823529, 0.0666667, 1 )
+polygon = PoolVector2Array( 2520, 520, 2592, 520, 2584, 976 )
+
+[node name="Polygon2D5" type="Polygon2D" parent="StaticBodies"]
+color = Color( 0.054902, 0.0823529, 0.0666667, 1 )
+polygon = PoolVector2Array( 2664, 640, 2704, 1184, 3376, 1216, 3416, 640 )
+
+[node name="Polygon2D6" type="Polygon2D" parent="StaticBodies"]
+color = Color( 0.054902, 0.0823529, 0.0666667, 1 )
+polygon = PoolVector2Array( 3568, 744, 3712, 744, 3704, 1132, 3592, 1088 )
+
+[node name="Polygon2D7" type="Polygon2D" parent="StaticBodies"]
+color = Color( 0.054902, 0.0823529, 0.0666667, 1 )
+polygon = PoolVector2Array( 3800, 776, 3808, 800, 3936, 800, 3944, 776 )
+
+[node name="Polygon2D8" type="Polygon2D" parent="StaticBodies"]
+color = Color( 0.054902, 0.0823529, 0.0666667, 1 )
+polygon = PoolVector2Array( 4264, 776, 4272, 792, 4400, 792, 4408, 776 )
+
+[node name="Polygon2D9" type="Polygon2D" parent="StaticBodies"]
+color = Color( 0.054902, 0.0823529, 0.0666667, 1 )
+polygon = PoolVector2Array( 4544, 984, 5160, 1008, 5144, 720, 4480, 720 )
+
+[node name="Polygon2D10" type="Polygon2D" parent="StaticBodies"]
+color = Color( 0.054902, 0.0823529, 0.0666667, 1 )
+polygon = PoolVector2Array( 5552, 480, 5560, 1208, 5968, 1216, 6008, 480 )
+
+[node name="Polygon2D11" type="Polygon2D" parent="StaticBodies"]
+color = Color( 0.054902, 0.0823529, 0.0666667, 1 )
+polygon = PoolVector2Array( 6104, 408, 6152, 1048, 6608, 1032, 6576, 408 )
+
+[node name="Polygon2D12" type="Polygon2D" parent="StaticBodies"]
+color = Color( 0.054902, 0.0823529, 0.0666667, 1 )
+polygon = PoolVector2Array( 6656, 360, 6672, 1024, 6768, 1024, 6760, 360 )
+
+[node name="Polygon2D13" type="Polygon2D" parent="StaticBodies"]
+color = Color( 0.054902, 0.0823529, 0.0666667, 1 )
+polygon = PoolVector2Array( 7104, 368, 7296, 1024, 7392, 1024, 7400, 368 )
+
+[node name="DeadZone" type="Area2D" parent="." groups=[
+"Deadly",
+]]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="DeadZone"]
+polygon = PoolVector2Array( -328, 784, -328, 896, 11840, 872, 12216, 808 )
+
+[node name="Grabables" type="Node2D" parent="."]
+
+[node name="GrabPoint4" parent="Grabables" instance=ExtResource( 7 )]
+position = Vector2( 3024, 444 )
+
+[node name="GrabPoint7" parent="Grabables" instance=ExtResource( 7 )]
+position = Vector2( 3024, 216 )
+
+[node name="GrabPoint8" parent="Grabables" instance=ExtResource( 7 )]
+position = Vector2( 3024, -8 )
+
+[node name="GrabPoint9" parent="Grabables" instance=ExtResource( 7 )]
+position = Vector2( 3224, 96 )
+
+[node name="GrabPoint10" parent="Grabables" instance=ExtResource( 7 )]
+position = Vector2( 2808, 96 )
+
+[node name="GrabPoint11" parent="Grabables" instance=ExtResource( 7 )]
+position = Vector2( 2808, 96 )
+
+[node name="GrabPoint5" parent="Grabables" instance=ExtResource( 7 )]
+position = Vector2( 4096, 576 )
+
+[node name="GrabPoint6" parent="Grabables" instance=ExtResource( 7 )]
+position = Vector2( 5272, 448 )
+
+[node name="Bird" parent="Grabables" instance=ExtResource( 3 )]
+position = Vector2( 7352, 168 )
+can_be_pinned_once = false
+
+[node name="Bird2" parent="Grabables" instance=ExtResource( 3 )]
+position = Vector2( 5272, 422 )
+force_unpin_time = 3.0
+move_ang_pinned = -0.942
+
+[node name="Collectables" type="Node2D" parent="."]
+
+[node name="Fly" parent="Collectables" instance=ExtResource( 2 )]
+position = Vector2( 648, 416 )
+
+[node name="Fly2" parent="Collectables" instance=ExtResource( 2 )]
+position = Vector2( 1528, 407 )
+
+[node name="Fly4" parent="Collectables" instance=ExtResource( 2 )]
+position = Vector2( 3024, 279 )
+
+[node name="Fly5" parent="Collectables" instance=ExtResource( 2 )]
+position = Vector2( 2824, 304 )
+
+[node name="Fly12" parent="Collectables" instance=ExtResource( 2 )]
+position = Vector2( 2928, 136 )
+
+[node name="Fly13" parent="Collectables" instance=ExtResource( 2 )]
+position = Vector2( 2632, 136 )
+
+[node name="Fly14" parent="Collectables" instance=ExtResource( 2 )]
+position = Vector2( 2688, 0 )
+
+[node name="Fly15" parent="Collectables" instance=ExtResource( 2 )]
+position = Vector2( 2832, -72 )
+
+[node name="Fly16" parent="Collectables" instance=ExtResource( 2 )]
+position = Vector2( 3160, -104 )
+
+[node name="Fly17" parent="Collectables" instance=ExtResource( 2 )]
+position = Vector2( 3320, -56 )
+
+[node name="Fly18" parent="Collectables" instance=ExtResource( 2 )]
+position = Vector2( 3280, 248 )
+
+[node name="Fly19" parent="Collectables" instance=ExtResource( 2 )]
+position = Vector2( 2992, -216 )
+
+[node name="Fly6" parent="Collectables" instance=ExtResource( 2 )]
+position = Vector2( 3272, 312 )
+
+[node name="Fly7" parent="Collectables" instance=ExtResource( 2 )]
+position = Vector2( 4096, 392 )
+
+[node name="Fly8" parent="Collectables" instance=ExtResource( 2 )]
+position = Vector2( 5168, 232 )
+
+[node name="Fly9" parent="Collectables" instance=ExtResource( 2 )]
+position = Vector2( 4576, 560 )
+
+[node name="Fly10" parent="Collectables" instance=ExtResource( 2 )]
+position = Vector2( 5832, 328 )
+
+[node name="Fly11" parent="Collectables" instance=ExtResource( 2 )]
+position = Vector2( 5704, 335 )
+
+[node name="Fly3" parent="Collectables" instance=ExtResource( 2 )]
+position = Vector2( 1912, 304 )
+
+[node name="Checkpoints" type="Node2D" parent="."]
+
+[node name="Checkpoint" parent="Checkpoints" instance=ExtResource( 4 )]
+position = Vector2( 78.4, 568 )
+
+[node name="Checkpoint2" parent="Checkpoints" instance=ExtResource( 4 )]
+position = Vector2( 1200, 568 )
+
+[node name="Checkpoint3" parent="Checkpoints" instance=ExtResource( 4 )]
+position = Vector2( 3256, 632 )
+
+[node name="Checkpoint8" parent="Checkpoints" instance=ExtResource( 4 )]
+position = Vector2( 3872, 760 )
+
+[node name="Checkpoint7" parent="Checkpoints" instance=ExtResource( 4 )]
+position = Vector2( 2168, 560 )
+
+[node name="Checkpoint4" parent="Checkpoints" instance=ExtResource( 4 )]
+position = Vector2( 4848, 720 )
+
+[node name="Checkpoint6" parent="Checkpoints" instance=ExtResource( 4 )]
+position = Vector2( 5624, 456 )
+
+[node name="Checkpoint5" parent="Checkpoints" instance=ExtResource( 4 )]
+position = Vector2( 7264, 354 )
+
+[node name="SuperjumpZones" type="Node2D" parent="."]
+
+[node name="SuperjumpZone" parent="SuperjumpZones" instance=ExtResource( 1 )]
+position = Vector2( 6712, 360 )

@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://obj/superjump_zone.tscn" type="PackedScene" id=1]
+[ext_resource path="res://obj/checkpoint.tscn" type="PackedScene" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[node name="Lvl" type="Node2D"]
+
+[node name="StaticBodies" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 0
+
+[node name="Floor" type="CollisionPolygon2D" parent="StaticBodies"]
+polygon = PoolVector2Array( -344, 576, -288, 1160, 1792, 752, 1792, 344, 1680, 344, 1678.62, 504, 1488, 504, 1488, 576, 1200, 576, 1200, 544, 1040, 544, 1040, 576 )
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBodies"]
+color = Color( 0.054902, 0.0823529, 0.0666667, 1 )
+polygon = PoolVector2Array( -344, 576, -288, 1160, 1792, 752, 1792, 344, 1680, 344, 1678.62, 504, 1488, 504, 1488, 576, 1200, 576, 1200, 544, 1040, 544, 1040, 576 )
+
+[node name="DeadZone" type="Area2D" parent="." groups=[
+"Deadly",
+]]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="DeadZone"]
+polygon = PoolVector2Array( -328, 784, -328, 896, 11840, 872, 12216, 808 )
+
+[node name="Grabables" type="Node2D" parent="."]
+
+[node name="Collectables" type="Node2D" parent="."]
+
+[node name="Checkpoints" type="Node2D" parent="."]
+
+[node name="Checkpoint" parent="Checkpoints" instance=ExtResource( 4 )]
+position = Vector2( 7264, 354 )
+
+[node name="SuperjumpZones" type="Node2D" parent="."]
+
+[node name="SuperjumpZone" parent="SuperjumpZones" instance=ExtResource( 1 )]
+position = Vector2( 6712, 360 )
+
+[node name="Cuts" type="Node2D" parent="."]
+
+[node name="CutTrigger" type="Area2D" parent="Cuts"]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cuts/CutTrigger"]
+shape = SubResource( 1 )
+
+[node name="PlayerStartPos" type="Position2D" parent="."]
+position = Vector2( 192, 576 )

@@ -1,0 +1,6 @@
+[gd_scene format=2]
+
+[node name="TongueJoint" type="PinJoint2D"]
+node_a = NodePath("..")
+node_b = NodePath("../../TongueSegment2")
+softness = 0.2

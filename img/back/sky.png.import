@@ -1,0 +1,13 @@
+[remap]
+
+importer="image"
+type="Image"
+path="res://.import/sky.png-f1abf9c746460eb6277390aacc4b1036.image"
+
+[deps]
+
+source_file="res://img/back/sky.png"
+dest_files=[ "res://.import/sky.png-f1abf9c746460eb6277390aacc4b1036.image" ]
+
+[params]
+
